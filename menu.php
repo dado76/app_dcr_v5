@@ -16,7 +16,7 @@
 
                 </li>
                 <li class="has-subnav">
-                    <a href="gestion_balise">
+                    <a href="../balise/tableau">
                   <i class="fa fa-map-marker"></i>
                         <span class="nav-text">
                           Balise
@@ -25,7 +25,7 @@
 
                 </li>
                 <li class="has-subnav">
-                    <a href="gestion_radio">
+                    <a href="../radio/tableau">
                        <i class="	fa fa-microphone fa-2x"></i>
                         <span class="nav-text">
                           Radio

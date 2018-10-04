@@ -50,6 +50,14 @@
 
 .fancybox-inner {
 	overflow: hidden;
+	
+}
+.fancybox-inner td {
+	
+color:black; 
+width: 50%;
+font-size: 20px;
+border: #005B9E, 2px;
 }
 
 .fancybox-type-iframe .fancybox-inner {

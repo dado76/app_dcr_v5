@@ -4,7 +4,7 @@ RewriteEngine On
 RewriteRule	^gestion_bom$	bom.php	[L]
 
 RewriteEngine On
-RewriteRule	^radio/tableau$	radio.php	[L]
+RewriteRule	^radio/tableau$	radio/radio.php	[L]
 
 RewriteEngine On
 RewriteRule	^balise/tableau$	balise/balise.php	[L]

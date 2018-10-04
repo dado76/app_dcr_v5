@@ -25,15 +25,33 @@ float:right;
 
 
 .boddy { grid-area: boddy;        border-width : 1px;
-margin-top: 2px;
+
      border: 1px solid #ddd;
      border-radius:6px;
  }
 
 
+ img { text-align: right;
+   float: right;
+   }
+h1 { text-align: center;
+  margin-left: 20px;
+  }
 
 
 
+
+  .low-risk{
+      background: green;
+  }
+
+  .medium-risk{
+      background: orange;
+  }
+
+  .high-risk{
+      background: red;
+  }
 
 
    /*****TABLEAUUU****/
@@ -42,7 +60,7 @@ margin-top: 2px;
        border-collapse: collapse;
     margin: 1%;
            background-color: #ddd;
-           font-size: 90%;
+           font-size: 80%;
 
 
    }

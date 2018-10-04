@@ -91,9 +91,11 @@
 							$str.="<td>".$row['LC']."</td>";
 							$str.="<td>".$row['pesee']."</td>";
 							$str.="<td>".$row['origin']."</td>";
-							$str.="<td><center><a class='fancybox fancybox.ajax' href='addbalise.php?ppid=".$row['id']."' onclick='return update()'><img src = '../images/edit-icon.png' height='30' width='30' alt = 'edit' title = 'edit'/></a><a href='viewbalise.php?pid=".$row['id']."' onclick='return bura()' ><img src = '../images/view.png' height='30' width='30' alt = 'view' title = 'voir'/></a><a href='delbalise.php?pid=".$row['id']."' onclick='return bura()' ><img src = '../images/edit_delete.png' height='30' width='30' alt = 'delete' title = 'delete'/></a></center></td></tr>";
+							$str.="<td><center><a class='fancybox fancybox.ajax' href='addbalise.php?ppid=".$row['id']."' onclick='return update()'><img src = '../images/edit-icon.png' height='30' width='30' alt = 'edit' title = 'edit'/></a><a class='fancybox fancybox.ajax' href='viewbalise.php?pid=".$row['id']."' onclick='return update()' ><img src = '../images/view.png' height='30' width='30' alt = 'view' title = 'voir'/></a><a href='delbalise.php?pid=".$row['id']."' onclick='return bura()' ><img src = '../images/edit_delete.png' height='30' width='30' alt = 'delete' title = 'delete'/></a></center></td></tr>";
+
 						}
 						echo $str;
+
 						echo "</tbody></table></div>";
                 ?>
 

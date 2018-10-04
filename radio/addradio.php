@@ -1,8 +1,4 @@
-
 <?php
-require('../dbconnection.php');
-require('../db.php');
-include("../auth.php");
 
 ?>
 <?php require_once ("../dbconnection.php");
@@ -13,7 +9,6 @@ include("../auth.php");
 	$type="";/* ON MET LES VARIABLE A  */
 		$statut="";/* ON MET LES VARIABLE A  */
 		$modele="";/* ON MET LES VARIABLE A  */
-
 		if(isset($_GET['ppid'])){
 			$ppid = $_GET['ppid'];
 			$sqlLoader="Select from radio where id=?";
@@ -27,14 +22,12 @@ include("../auth.php");
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Ajouter radio</title>
 
-</head>
 <?php
 	$sqladd="Select * from radio where id=?";
 	$resadd=$db->prepare($sqladd);
 	$resadd->execute(array($ppid));
 		while($rowadd = $resadd->fetch(PDO::FETCH_ASSOC)){
 		$pnum=$rowadd['id'];
-
 				$numero_appel=$rowadd['numero_appel'];
 				$codification=$rowadd['codification'];
 				$numero_serie=$rowadd['numero_serie'];
@@ -42,13 +35,12 @@ include("../auth.php");
 				$statut=$rowadd['statut'];
 				$modele=$rowadd['modele'];
 	}
-
-
-
-
-
 ?>
     <form method="post" name="frmStudent" action="saveradio.php">
+			<center>
+			<button class="myButton" value="Retour" id="myButton">
+					<h1>Radio du <?php  echo $codification; ?></h1></th></button></center>
+
     <input type="hidden" name="pid" value="<?php echo $ppid; ?>"/>
         <table>
             <tr><td>Numéro d'appel:</td><td><input type="text" name="numero_appel" required="required" value="<?php echo $numero_appel; ?>"/></td></tr>

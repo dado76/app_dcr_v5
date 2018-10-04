@@ -19,7 +19,6 @@
 
 
 
-
       <!DOCTYPE html>
 
       <?php
@@ -31,11 +30,13 @@
 
       <div class="grid-container">
         <div class="menu">
+
     <?php  include("../menu.php");
 ?>
 
         </div>
         <div class="boddy">
+        <img src="https://3d.codah.fr/img/logos/logo_codah_big.jpg" width="80" height="120">  <h1>Direction Collecte et Recyclage</h1>
 
 
 

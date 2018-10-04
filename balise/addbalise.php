@@ -63,6 +63,11 @@ $origin="";
 
 ?>
     <form method="post" name="frmStudent" action="savebalise.php">
+
+			<center>
+			<button class="myButton" value="Retour" id="myButton">
+					<h1>Balise du <?php  echo $codification; ?></h1></th></button></center>
+
     <input type="hidden" name="pid" value="<?php echo $ppid; ?>"/>
         <table>
 
@@ -83,7 +88,7 @@ $origin="";
 
 				<br>
 				<br>
-				<center><input type="submit" class="myButton" value="Sauvegarder"/></center>
+				<center><input type="submit" class="myButton" value="Sauvegarder" id="myButton"  class="fancybox fancybox.ajax"/></center>
     </form>
 <body>
 </body>
