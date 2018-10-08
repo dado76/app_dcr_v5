@@ -2,7 +2,7 @@
 <?php
 require('../dbconnection.php');
 require('../db.php');
-
+include("auth.php");
 
 ?>
 
@@ -23,35 +23,46 @@ require('../db.php');
 
  <body>
    <?php
-   					$sql="Select * from radio";
+   					$sql="Select * from carte_sims";
    					$res=$db->prepare($sql);
    					$res->execute();
    	    ?><table id="empTable"><?php
-        $str.="<thead><tr>
-        <th>ID</th>
-        <th>N°Appel</th>
-        <th>Codification</th>
-        <th>N°serie</th>
-        <th>Type de radio</th>
-        <th>Statut</th><th>Modele</th>
+   					$str.="<thead><tr>  <th>ID</th>
+   															<th>Codification</th>
+   															<th>Carte sims</th>
+   															<th>N/S Balise</th>
+   															<th>N° Telephone</th>
+   															<th>ID et Port</th>
+   															<th>Immatriculation</th>
+   													    <th>Statut</th>
+   															<th>RFID</th>
+   															<th>Navigation</th>
+   															<th>Leve Conteneur</th>
+   															<th>Pesee embarquee</th>
+   															<th>Nom d'ogirine</th>
 
-        </tr></thead>
-        <tbody>";
-
+   															</tr>
+   															</thead>
+   															<tbody>";
    						while($row = $res->fetch(PDO::FETCH_ASSOC)){
    							$str.="<tr><td>".$row['id']."</td>";
-   							$str.="<td>".$row['numero_appel']."</td>";
    							$str.="<td>".$row['codification']."</td>";
-     						$str.="<td>".$row['numero_serie']."</td>";
-   							$str.="<td>".$row['type']."</td>";
+   							$str.="<td>".$row['sim']."</td>";
+     						$str.="<td>".$row['balise']."</td>";
+   							$str.="<td>".$row['telephone']."</td>";
+   							$str.="<td>".$row['IDPORT']."</td>";
+   							$str.="<td>".$row['immatriculation']."</td>";
    							$str.="<td>".$row['statut']."</td>";
-   							$str.="<td>".$row['modele']."</td>";
-;
+   							$str.="<td>".$row['RFID']."</td>";
+   							$str.="<td>".$row['navigation']."</td>";
+   							$str.="<td>".$row['LC']."</td>";
+   							$str.="<td>".$row['pesee']."</td>";
+   							$str.="<td>".$row['origin']."</td>";
    						}
    						echo $str;
    						echo "</tbody></table></div>";
                    ?>
-<meta http-equiv="refresh" content="0;URL=../radio/tableau">
+<meta http-equiv="refresh" content="0;URL=balise.php">
 </article>
     </main>
 <script>
@@ -84,7 +95,7 @@ function showUser(str) {
     <script>
     $(document).ready(function () {
         $("#empTable").table2excel({
-            filename: "radio_liste.xls"
+            filename: "balise_liste.xls"
         });
     });
 </script>

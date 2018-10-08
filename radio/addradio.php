@@ -22,6 +22,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Ajouter radio</title>
 
+</head>
 <?php
 	$sqladd="Select * from radio where id=?";
 	$resadd=$db->prepare($sqladd);
@@ -36,13 +37,14 @@
 				$modele=$rowadd['modele'];
 	}
 ?>
-    <form method="post" name="frmStudent" action="saveradio.php">
-			<center>
-			<button class="myButton" value="Retour" id="myButton">
-					<h1>Radio du <?php  echo $codification; ?></h1></th></button></center>
+<form method="post" name="frmStudent" action="saveradio.php">
 
-    <input type="hidden" name="pid" value="<?php echo $ppid; ?>"/>
-        <table>
+	<center>
+	<button class="myButton" value="Retour" id="myButton">
+			<h1>Balise du <?php  echo $codification; ?></h1></th></button></center>
+
+<input type="hidden" name="pid" value="<?php echo $ppid; ?>"/>
+		<table>
             <tr><td>Numéro d'appel:</td><td><input type="text" name="numero_appel" required="required" value="<?php echo $numero_appel; ?>"/></td></tr>
             <tr><td>Codification:</td><td><input type="text" name="codification"  value="<?php echo $codification; ?>"/></td></tr>
             <tr><td>Numéro de série:</td><td><input type="text" name="numero_serie"  value="<?php echo $numero_serie; ?>"/></td></tr>
@@ -50,11 +52,13 @@
 			<tr><td>Statut:</td><td><input type="text" name="statut" value="<?php echo $statut; ?>"/></td></tr>
 			<tr><td>Modele:</td><td><input type="text" name="modele" value="<?php echo $modele ?>"/></td></tr>
 
-        </table>
-				<br>
-				<br>
-				<center><input type="submit" class="myButton" value="Sauvegarder"/></center>
-    </form>
-<body>
-</body>
-</html>
+
+						  </table>
+
+							<br>
+							<br>
+							<center><input type="submit" class="myButton" value="Sauvegarder" id="myButton"  class="fancybox fancybox.ajax"/></center>
+			    </form>
+			<body>
+			</body>
+			</html>

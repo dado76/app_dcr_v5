@@ -8,3 +8,9 @@ RewriteRule	^radio/tableau$	radio/radio.php	[L]
 
 RewriteEngine On
 RewriteRule	^balise/tableau$	balise/balise.php	[L]
+
+RewriteEngine On
+RewriteRule	^video/tableau$	video/video.php	[L]
+
+RewriteEngine On
+RewriteRule	^accueil$	index.php	[L]

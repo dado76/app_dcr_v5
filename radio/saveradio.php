@@ -1,10 +1,5 @@
 
 <?php
-require('../dbconnection.php');
-require('../db.php');
-include("../auth.php");
-?>
-<?php
 error_reporting(0);
 include ("../dbconnection.php");
 $id=$_POST['pid'];

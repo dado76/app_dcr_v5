@@ -23,35 +23,44 @@ require('../db.php');
 
  <body>
    <?php
-   					$sql="Select * from radio";
+   					$sql="Select * from video";
    					$res=$db->prepare($sql);
    					$res->execute();
    	    ?><table id="empTable"><?php
         $str.="<thead><tr>
-        <th>ID</th>
-        <th>N°Appel</th>
-        <th>Codification</th>
-        <th>N°serie</th>
-        <th>Type de radio</th>
-        <th>Statut</th><th>Modele</th>
 
-        </tr></thead>
-        <tbody>";
+        					  <th>ID</th>
+        															<th>site</th>
+        															<th>code</th>
+        															<th>equipement</th>
+        															<th>N° numero_serie</th>
+        															<th>Repere</th>
+        															<th>date_installation</th>
+        													    <th>duree_garanti</th>
+        															<th>etat_garanti</th>
+
+        						
+        															</tr>
+        															</thead>
+        															<tbody>";
 
    						while($row = $res->fetch(PDO::FETCH_ASSOC)){
    							$str.="<tr><td>".$row['id']."</td>";
-   							$str.="<td>".$row['numero_appel']."</td>";
-   							$str.="<td>".$row['codification']."</td>";
-     						$str.="<td>".$row['numero_serie']."</td>";
-   							$str.="<td>".$row['type']."</td>";
-   							$str.="<td>".$row['statut']."</td>";
-   							$str.="<td>".$row['modele']."</td>";
-;
+
+  							$str.="<td>".$row['site']."</td>";
+  							$str.="<td>".$row['code']."</td>";
+    						$str.="<td>".$row['equipement']."</td>";
+  							$str.="<td>".$row['numero_serie']."</td>";
+  							$str.="<td>".$row['repere']."</td>";
+  							$str.="<td>".$row['date_installation']."</td>";
+  							$str.="<td>".$row['duree_garanti']."</td>";
+  							$str.="<td>".$row['etat_garanti']."</td>";
+
    						}
    						echo $str;
    						echo "</tbody></table></div>";
                    ?>
-<meta http-equiv="refresh" content="0;URL=../radio/tableau">
+<meta http-equiv="refresh" content="0;URL=../video/tableau">
 </article>
     </main>
 <script>
@@ -84,7 +93,7 @@ function showUser(str) {
     <script>
     $(document).ready(function () {
         $("#empTable").table2excel({
-            filename: "radio_liste.xls"
+            filename: "equipement_video_liste.xls"
         });
     });
 </script>

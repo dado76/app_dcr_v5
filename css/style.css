@@ -21,6 +21,7 @@ body {
         border-color : black;
 
 float:right;
+
  }
 
 
@@ -28,6 +29,7 @@ float:right;
 
      border: 1px solid #ddd;
      border-radius:6px;
+     margin-left: 3%;
  }
 
 
@@ -60,7 +62,7 @@ h1 { text-align: center;
        border-collapse: collapse;
     margin: 1%;
            background-color: #ddd;
-           font-size: 80%;
+           font-size: 70%;
 
 
    }
@@ -74,7 +76,7 @@ h1 { text-align: center;
 
    table tr:nth-child(even){background-color: #f2f2f2;}
 
-   table tr:hover {background-color: #5FA2DB;}
+   table tr:hover {background-color: #F7F8E0;}
 
    table th {
 
